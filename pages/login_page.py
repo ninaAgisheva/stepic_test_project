@@ -4,6 +4,7 @@ from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):
+    
     def should_be_login_page(self):
         self.should_be_login_url()
         self.should_be_login_form()
@@ -11,7 +12,6 @@ class LoginPage(BasePage):
 
     def should_be_login_url(self):
         link = 'http://selenium1py.pythonanywhere.com/ru/accounts/login/'
-        #breakpoint()
         assert self.browser.current_url == link
 
 
@@ -27,3 +27,6 @@ class LoginPage(BasePage):
         page = MainPage(self.browser, link)   
         page.open()
         assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Login register is not presented"
+
+
+    
