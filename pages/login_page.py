@@ -29,4 +29,5 @@ class LoginPage(BasePage):
         assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Login register is not presented"
 
 
-    
+    def register_new_user(email, password):
+        
